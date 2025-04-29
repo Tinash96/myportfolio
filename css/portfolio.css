@@ -1,0 +1,258 @@
+.portfolio__section{
+  padding-top: 20px;
+  
+  background: var(--container-color)
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  height: 600px;
+
+}
+
+.container .card{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .card .content{
+  position: absolute;
+  inset:0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+  gap: 10px;
+  transition-delay: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+
+}
+
+.container .card:hover .content{
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.container .card .content h2{
+  color: var(--first-color);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.container .card .content p{
+
+  
+  color: #fff;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  
+
+}
+
+.container .card .content a{
+
+color: #fff;
+background: var(--first-color);
+padding: 10px 15px;
+text-decoration: none;
+display: inline;
+margin: 10px;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+
+}
+
+
+
+.container .card .imgbx,
+.container .card .textbx{
+position: relative;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.5s;
+
+
+}
+
+.container .card .imgbx{
+  background:var(--white);
+  height: 120px;
+  z-index: 1;
+  transform-origin: bottom;
+}
+
+.container .card:hover .imgbx{
+  transform: translateY(-100%) rotateX(90deg);
+}
+
+
+.container .card .textbx{
+  height: 280px;
+  background: var(--first-color);
+  border-top: 8px solid #333;
+  transform-origin: top;
+  transition-delay: 0.5s;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+
+.container .card:hover .textbx{
+  transform: translateY(100% ) rotateX(90deg);
+}
+
+.container .card .textbx h2{
+  color:#222;
+  font-size: 1.2rem;
+  letter-spacing: 0.15rem;
+  font-family: 500;
+  text-transform: uppercase;
+  background: #fff;
+  padding: 5px 25px;
+  box-shadow: 0 0 0 8px #333;
+}
+
+.container .card .imgbx::before{
+  position: absolute;
+  content: '';
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -70px;
+  width: 144px;
+  height: 74px;
+  background-color: var(--white);
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  z-index: 1;
+}
+
+
+.container .card .textbx::before{
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 160px;
+  height: 80px;
+  background: #333;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+
+}
+
+.container .card .imgbx img{
+  position: relative;
+  top: 50px;
+  z-index: 1000;
+}
+
+
+
+
+
+
+.img4{
+  width: 100px;
+  height: 100px;
+}
+
+.container-grid{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+  width: 1200px;
+  justify-content: center;
+  padding: 0 20px;
+
+  
+} 
+
+/* Styling for Pagination */
+.pagination {
+  text-align: center;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.pagination button {
+  background-color: #ff6a00;
+  color: white;
+  border: 2px solid #ff6a00;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.pagination button.active {
+  background-color: #ff8c42;
+  border: 2px solid #ff8c42;
+}
+
+.pagination button:hover {
+  background-color: #ff9f5f;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 159, 95, 0.5);
+}
+
+/* Fancy hover effect with shadow and scale */
+.pagination button:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 159, 95, 0.8);
+}
+
+/* Arrow Style for Pagination */
+.pagination button::before {
+  content: '◀';
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.pagination button:last-child::before {
+  content: '▶';
+  margin-right: 0;
+}
+
+.pagination .prev,
+.pagination .next {
+  background-color: #ff6a00;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination .prev:hover,
+.pagination .next:hover {
+  background-color: #ff9f5f;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 159, 95, 0.5);
+}
+
+.pagination .prev:focus,
+.pagination .next:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 159, 95, 0.8);
+}
+
